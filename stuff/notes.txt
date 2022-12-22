@@ -24,3 +24,5 @@ if they are not
 
 #sum_name = match.json()['info']['participants'][6]['summonerName']
 accessing from dictionary
+
+delay is about 10 seconds after match completetes
