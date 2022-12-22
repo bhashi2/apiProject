@@ -1,0 +1,38 @@
+[
+    {
+        "leagueId": "84535586-b487-459a-ac3f-41187ccbe98d",
+        "queueType": "RANKED_FLEX_SR",
+        "tier": "PLATINUM",
+        "rank": "III",
+        "summonerId": "ieJH-uiaKvnggfA_kXjPUUyT0L6RjP-YlIwnlXuyEArpqDo",
+        "summonerName": "Viollet",
+        "leaguePoints": 18,
+        "wins": 32,
+        "losses": 24,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false
+    },
+    {
+        "leagueId": "efef9fb2-e4d3-4fba-b944-7a6da7c1f8ac",
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "GOLD",
+        "rank": "I",
+        "summonerId": "ieJH-uiaKvnggfA_kXjPUUyT0L6RjP-YlIwnlXuyEArpqDo",
+        "summonerName": "Viollet",
+        "leaguePoints": 100,
+        "wins": 15,
+        "losses": 11,
+        "veteran": false,
+        "inactive": false,
+        "freshBlood": false,
+        "hotStreak": false,
+        "miniSeries": {
+            "target": 3,
+            "wins": 0,
+            "losses": 0,
+            "progress": "NNNNN"
+        }
+    }
+]

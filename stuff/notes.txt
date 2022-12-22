@@ -1,0 +1,26 @@
+Viollet information:
+    "accountId": "JWQJu_Sh_JLhfueWfmuyWp8nUOA-gIQz0T4GQoYfTltH8ohuo5UpWufj",
+    "id": "ieJH-uiaKvnggfA_kXjPUUyT0L6RjP-YlIwnlXuyEArpqDo",
+    "name": "Viollet",
+    "profileIconId": 3374,
+    "puuid": "MiIlF2UvUwp53cn1PptUqAA5Ep1ECdBkWn0iPx74OsPWX9-9mORVZcHKaPKY3ZHS6-C--MCLuzygbQ",
+    "revisionDate": 1650867502659,
+    "summonerLevel": 712 (sadge)
+
+
+/lol/match/v5/matches/by-puuid/{puuid}/ids
+https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/MiIlF2UvUwp53cn1PptUqAA5Ep1ECdBkWn0iPx74OsPWX9-9mORVZcHKaPKY3ZHS6-C--MCLuzygbQ/ids?start=0&count=5&api_key=RGAPI-a0eb0abb-0028-4439-baf1-b5c6dcb0ed28
+
+important for matches ^
+
+
+https://developer.riotgames.com/apis#match-v5/GET_getMatchIdsByPUUID
+
+
+/lol/spectator/v4/active-games/by-summoner/{encryptedSummonerId}
+
+this gets if they are in game, use ID value, gets 200 if they are in game and 404
+if they are not
+
+#sum_name = match.json()['info']['participants'][6]['summonerName']
+accessing from dictionary
