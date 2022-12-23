@@ -20,7 +20,7 @@ match_ids = getMatchIds(puuid, "10")
 #print(match_ids.json()[0])
 
 # prints recent matches
-for i in range(1):
+for i in range(10):
     print("match number:", i+1)
     match = getMatchInfo(match_ids.json()[i])
     summoner_dict = createMatchDictionary(match)
