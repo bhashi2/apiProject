@@ -23,10 +23,10 @@ match_ids = getMatchIds(puuid, "10")
 for i in range(1):
     print("match number:", i+1)
     match = getMatchInfo(match_ids.json()[i])
-    summoner_dict = createPlayerDictionary(match)
+    summoner_dict = createMatchDictionary(match)
 
     printPlayers(summoner_dict)
-    print(summoner_dict)
+    # print(summoner_dict)
     print("\n")
 
 # rank_json = getRankInfo(summoner_dict[0]['e_id'])
