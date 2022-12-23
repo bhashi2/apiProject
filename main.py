@@ -1,12 +1,13 @@
 import requests
 import json
+import pymongo
 from functions import *
 from api_calls import *
 from summonerClass import *
 from mongodatabase import get_database
 
-dbname = get_database
-collection_name = dbname["matches"]
+dbname = get_database()
+myCol = dbname["matches"]
 name = "Viollet" 
 # name = input("summoner name: ")
 
@@ -19,14 +20,15 @@ encrypted_id = sum_details.json()['id']
 match_ids = getMatchIds(puuid, "10")
 
 # prints recent matches
-for i in range(10):
+for i in range(1):
     print("match number:", i+1)
     match = getMatchInfo(match_ids.json()[i])
     summoner_dict = createMatchDictionary(match)
-
+    # for x in summoner_dict.values():
+    #     print(x)
     printPlayers(summoner_dict)
-    # print(summoner_dict)
     print("\n")
+    # x = myCol.insert_one(summoner_dict)
 
 # rank_json = getRankInfo(summoner_dict[0]['e_id'])
 

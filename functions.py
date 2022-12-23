@@ -29,8 +29,8 @@ def createMatchDictionary(match):
         'champ': match.json()['info']['participants'][x]['championName'],
         'kills': match.json()['info']['participants'][x]['kills'],
         'deaths': match.json()['info']['participants'][x]['deaths'],
-        'assists': match.json()['info']['participants'][x]['assists']
-        #'role': match.json()['info']['participants'][x]['lane']
+        'assists': match.json()['info']['participants'][x]['assists'],
+        'role': match.json()['info']['participants'][x]['teamPosition']
         }
     return summoner_dict
 
@@ -41,10 +41,10 @@ def printPlayers(dict):
     print("team win:",dict['teamWin'])
     print("\nblue team: ")
     for i in range(5):
-        print(dict[i]['name'] + ": " + dict[i]['champ'] + " " + str(dict[i]['kills']) + "/" + str(dict[i]['deaths']) + "/" + str(dict[i]['assists']))
+        print(dict[i]['role'] + " " + dict[i]['name'] + ": " + dict[i]['champ'] + " " + str(dict[i]['kills']) + "/" + str(dict[i]['deaths']) + "/" + str(dict[i]['assists']))
     print("\nred team:")
     for j in range(5, 10):
-        print(dict[j]['name'] + ": " + dict[j]['champ'] + " " + str(dict[j]['kills']) + "/" + str(dict[j]['deaths']) + "/" + str(dict[j]['assists']))
+        print(dict[j]['role'] + " " + dict[j]['name'] + ": " + dict[j]['champ'] + " " + str(dict[j]['kills']) + "/" + str(dict[j]['deaths']) + "/" + str(dict[j]['assists']))
 
     
 
