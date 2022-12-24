@@ -24,11 +24,9 @@ for i in range(1):
     print("match number:", i+1)
     match = getMatchInfo(match_ids.json()[i])
     summoner_dict = createMatchDictionary(match)
-    # for x in summoner_dict.values():
-    #     print(x)
     printPlayers(summoner_dict)
     print("\n")
-    # x = myCol.insert_one(summoner_dict)
+    x = myCol.insert_one(summoner_dict)
 
 # rank_json = getRankInfo(summoner_dict[0]['e_id'])
 

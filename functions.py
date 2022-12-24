@@ -22,7 +22,8 @@ def createMatchDictionary(match):
     }
     # x is each summoner dictionary, so x is the number of the key and value is summoner information
     for x in range(10):
-        summoner_dict[x] = {
+        sum_key = "sum" + str(x)
+        summoner_dict[sum_key] = {
         'name': match.json()['info']['participants'][x]['summonerName'],
         'puuid':match.json()['info']['participants'][x]['puuid'],
         'e_id': match.json()['info']['participants'][x]['summonerId'],
@@ -41,10 +42,12 @@ def printPlayers(dict):
     print("team win:",dict['teamWin'])
     print("\nblue team: ")
     for i in range(5):
-        print(dict[i]['role'] + " " + dict[i]['name'] + ": " + dict[i]['champ'] + " " + str(dict[i]['kills']) + "/" + str(dict[i]['deaths']) + "/" + str(dict[i]['assists']))
+        key = "sum" + str(i)
+        print(dict[key]['role'] + " " + dict[key]['name'] + ": " + dict[key]['champ'] + " " + str(dict[key]['kills']) + "/" + str(dict[key]['deaths']) + "/" + str(dict[key]['assists']))
     print("\nred team:")
     for j in range(5, 10):
-        print(dict[j]['role'] + " " + dict[j]['name'] + ": " + dict[j]['champ'] + " " + str(dict[j]['kills']) + "/" + str(dict[j]['deaths']) + "/" + str(dict[j]['assists']))
+        keyj = "sum" + str(j)
+        print(dict[keyj]['role'] + " " + dict[keyj]['name'] + ": " + dict[keyj]['champ'] + " " + str(dict[keyj]['kills']) + "/" + str(dict[keyj]['deaths']) + "/" + str(dict[keyj]['assists']))
 
     
 
