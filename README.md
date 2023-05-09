@@ -5,3 +5,7 @@ libraries used:
 requests
 json
 pymongo
+Flask
+
+Goals:
+create a flask backend with react frontend to display data retrieved using riot API
