@@ -3,11 +3,11 @@ import json
 import pymongo
 from functions import *
 from api_calls import *
-from summonerClass import *
 from mongodatabase import get_database
 
 dbname = get_database()
 myCol = dbname["matches"]
+myColWhole = dbname["whole_match"]
 name = "Viollet" 
 # name = input("summoner name: ")
 
@@ -23,10 +23,11 @@ match_ids = getMatchIds(puuid, "10")
 for i in range(1):
     print("match number:", i+1)
     match = getMatchInfo(match_ids.json()[i])
+    # wholeInsert = myColWhole.insert_one(match.json())
     summoner_dict = createMatchDictionary(match)
     printPlayers(summoner_dict)
     print("\n")
-    x = myCol.insert_one(summoner_dict)
+    insert = myCol.insert_one(summoner_dict)
 
 # rank_json = getRankInfo(summoner_dict[0]['e_id'])
 
